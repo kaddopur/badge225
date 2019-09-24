@@ -1,12 +1,15 @@
 import React from 'react';
 import Badge from './Badge';
+import { BadgeProvider } from './badgeContext';
 
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Badge />
+      <BadgeProvider>
+        <Badge />
+      </BadgeProvider>
     </div>
   );
 }
