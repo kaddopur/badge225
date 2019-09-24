@@ -84,9 +84,27 @@ const PhotoFileInput = () => {
   );
 };
 
+const ButtonGroup = () => {
+  const dispatch = useBadgeDispatch();
+
+  return (
+    <>
+      <button className="button print-button" onClick={() => window.print()}>
+        Print
+      </button>
+      <button
+        className="button reset-button"
+        onClick={() => dispatch({ type: 'resetBadge' })}
+      >
+        Reset
+      </button>
+    </>
+  );
+};
+
 const Form = () => {
   return (
-    <form id="form">
+    <div id="form">
       <h1>Badge 22.5° Generator</h1>
       <p>Enter your name/color/photo, and just PRINT</p>
       <ul>
@@ -110,10 +128,8 @@ const Form = () => {
         <NameTextArea />
         <PhotoFileInput />
       </div>
-      <button className="print-button" onClick={() => window.print()}>
-        Print
-      </button>
-    </form>
+      <ButtonGroup />
+    </div>
   );
 };
 

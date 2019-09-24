@@ -3,6 +3,11 @@ import React from 'react';
 const BadgeStateContext = React.createContext();
 const BadgeDispatchContext = React.createContext();
 
+const initialState = {
+  color: '#ffa700',
+  name: 'minatozaki\nsana'
+};
+
 function getLocalState() {
   if (!localStorage) {
     throw new Error('badgeState must be use with localStorage');
@@ -32,6 +37,10 @@ function badgeReducer(state, action) {
   let newState = null;
 
   switch (action.type) {
+    case 'resetBadge': {
+      newState = initialState;
+      break;
+    }
     case 'updateColor': {
       newState = { ...state, color: action.payload.color };
       break;
@@ -54,11 +63,6 @@ function badgeReducer(state, action) {
 }
 
 function BadgeProvider({ children }) {
-  const initialState = {
-    color: '#ffa700',
-    name: 'minatozaki\nsana'
-  };
-
   const [state, dispatch] = React.useReducer(
     badgeReducer,
     getLocalState() || initialState

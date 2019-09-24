@@ -12,17 +12,37 @@
   flex-direction: column;
 }
 
-#form .print-button {
+#form .button {
   width: 100%;
   font-family: 'Yahoo-Sans-Bold';
   outline: none;
-  background-color: #1888ff;
-  color: white;
   font-size: 14px;
   border-radius: 18px;
   padding: 0 24px;
   line-height: 36px;
   cursor: pointer;
+  border-width: 2px;
+}
+
+#form .print-button {
+  border-color: transparent;
+  background-color: #1888ff;
+  color: white;
+}
+
+#form .print-button:active {
+  background-color: #003abc;
+}
+
+#form .reset-button {
+  margin-top: 10px;
+  border-color: #e0e4e9;
+  color: #188fff;
+}
+
+#form .reset-button:active {
+  border-color: transparent;
+  background-color: #f1f1f5;
 }
 
 #form label {
