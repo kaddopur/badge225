@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Yahoo-Sans-Bold';
+  src: local('Yahoo-Sans-Bold'), url(./Yahoo-Sans-Bold.woff) format('woff');
+}
+
+#badge {
+  width: 591px;
+  height: 945px;
+  background-color: #6001d2;
+  overflow: hidden;
+  position: relative;
+}
+
+#badge .logo {
+  position: absolute;
+  z-index: 10;
+  top: 35px;
+  left: 35px;
+  height: 183px;
+  z-index: 10;
+}
+
+#badge .name {
+  font-family: Yahoo-Sans-Bold, sans-serif;
+  color: white;
+  position: absolute;
+  font-size: 84px;
+  top: 400px;
+  left: 44px;
+  text-align: left;
+  line-height: 1;
+}
+
+#badge .avatar {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: 44px;
+  bottom: 44px;
+  border-radius: 100%;
+  background-color: #fff;
+  z-index: 10;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+#badge .top-overlay {
+  background-color: #39007d;
+  height: 300px;
+  width: 700px;
+  transform: rotate(22.5deg);
+  position: absolute;
+  top: -165px;
+  left: 0;
+}
+
+#badge .bottom-overlay {
+  background-color: #ffa700;
+  height: 300px;
+  width: 700px;
+  transform: rotate(-22.5deg);
+  position: absolute;
+  bottom: -165px;
+  left: 0;
+}
