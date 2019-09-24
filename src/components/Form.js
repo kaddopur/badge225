@@ -1,6 +1,6 @@
 import React from 'react';
+import { useBadgeState, useBadgeDispatch } from '../contexts/badgeContext';
 import './Form.css';
-import { useBadgeState, useBadgeDispatch } from './badgeContext';
 
 const ColorSelect = () => {
   const colors = [

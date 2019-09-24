@@ -1,7 +1,7 @@
 import React from 'react';
-import { useBadgeState } from './badgeContext';
-import logo from './logo.svg';
-import sana from './sana.png';
+import { useBadgeState } from '../contexts/badgeContext';
+import logo from '../assets/logo.svg';
+import sana from '../assets/sana.png';
 import './Badge.css';
 
 const Badge = () => {
