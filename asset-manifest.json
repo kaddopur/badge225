@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/badge225/static/css/main.c43334a7.chunk.css",
+    "main.js": "/badge225/static/js/main.831b9eb9.chunk.js",
+    "main.js.map": "/badge225/static/js/main.831b9eb9.chunk.js.map",
+    "runtime-main.js": "/badge225/static/js/runtime-main.c8ad37f7.js",
+    "runtime-main.js.map": "/badge225/static/js/runtime-main.c8ad37f7.js.map",
+    "static/js/2.521d2c41.chunk.js": "/badge225/static/js/2.521d2c41.chunk.js",
+    "static/js/2.521d2c41.chunk.js.map": "/badge225/static/js/2.521d2c41.chunk.js.map",
+    "index.html": "/badge225/index.html",
+    "precache-manifest.1cc03fa5b04a3466fd809738fb91051a.js": "/badge225/precache-manifest.1cc03fa5b04a3466fd809738fb91051a.js",
+    "service-worker.js": "/badge225/service-worker.js",
+    "static/css/main.c43334a7.chunk.css.map": "/badge225/static/css/main.c43334a7.chunk.css.map",
+    "static/media/App.css": "/badge225/static/media/Yahoo-Sans-Bold.8505cf60.woff",
+    "static/media/logo.svg": "/badge225/static/media/logo.ecac9a0e.svg",
+    "static/media/sana.png": "/badge225/static/media/sana.8690fb36.png"
+  }
+}
