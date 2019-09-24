@@ -59,7 +59,7 @@ const PhotoFileInput = () => {
 
   return (
     <div>
-      <label>File: square image (minimum 300 x 300px)</label>
+      <label>File - square image (minimum 300 x 300px)</label>
       <input
         type="file"
         ref={inputEl}
@@ -87,12 +87,24 @@ const PhotoFileInput = () => {
 const Form = () => {
   return (
     <form id="form">
-      <h1>Yahoo Badge 22.5° Generator</h1>
-      <p>Enter your name, select your color/photo, and just PRINT.</p>
-      <cite>
-        * Please note that this generator is NOT official and should NOT be used
-        in any public situation.
-      </cite>
+      <h1>Badge 22.5° Generator</h1>
+      <p>Enter your name/color/photo, and just PRINT</p>
+      <ul>
+        <li>
+          This generator is NOT official and should NOT be used in any public
+          situation
+        </li>
+        <li>
+          Inspired from&nbsp;
+          <a
+            href="https://www.pentagram.com/work/yahoo/story?fbclid=IwAR0DK3rJZIqnIsNGagz1YO0YFyHK3Xb0hjNRg-0Qufwg9XdAdz0WoAg8egc#27144"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            pentagram.com
+          </a>
+        </li>
+      </ul>
       <div className="container">
         <ColorSelect />
         <NameTextArea />

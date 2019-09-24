@@ -3,7 +3,7 @@
 }
 
 #form .container {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 #form .container > * {
@@ -13,6 +13,7 @@
 }
 
 #form .print-button {
+  width: 100%;
   font-family: 'Yahoo-Sans-Bold';
   outline: none;
   background-color: #1888ff;
@@ -21,6 +22,7 @@
   border-radius: 18px;
   padding: 0 24px;
   line-height: 36px;
+  cursor: pointer;
 }
 
 #form label {
@@ -30,8 +32,13 @@
   color: #999ca5;
 }
 
-#form cite {
+#form ul {
+  padding-left: 20px;
+}
+
+#form li {
   font-size: 12px;
+  font-style: italic;
 }
 
 @media print {
