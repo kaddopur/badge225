@@ -1,12 +1,12 @@
 import React from 'react';
 import './Badge.css';
-import yIcon from './yicon.svg';
+import logo from './logo.svg';
 import sana from './sana.png';
 
 const Badge = () => {
   return (
     <div id="badge">
-      <img className="logo" src={yIcon} alt="" />
+      <img className="logo" src={logo} alt="" />
       <div className="name">
         minatozaki
         <br />
