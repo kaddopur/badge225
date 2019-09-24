@@ -2,7 +2,7 @@
   "name": "badge225",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://git.ouroath.com/pages/cjhuang/badge225",
+  "homepage": "https://kaddopur.github.io/badge225",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.9.0",
