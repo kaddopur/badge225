@@ -22,6 +22,7 @@
   line-height: 36px;
   cursor: pointer;
   border-width: 2px;
+  border-style: solid;
 }
 
 #form .print-button {
@@ -36,6 +37,7 @@
 
 #form .reset-button {
   margin-top: 10px;
+  background-color: white;
   border-color: #e0e4e9;
   color: #188fff;
 }
