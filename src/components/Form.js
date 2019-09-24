@@ -45,7 +45,7 @@ const NameTextArea = () => {
         onChange={e =>
           dispatch({
             type: 'updateName',
-            payload: { name: e.target.value.toLowerCase() }
+            payload: { name: e.target.value }
           })
         }
       ></textarea>
