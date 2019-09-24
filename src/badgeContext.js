@@ -11,6 +11,9 @@ function badgeReducer(state, action) {
     case 'updateName': {
       return { ...state, name: action.payload.name };
     }
+    case 'updatePhoto': {
+      return { ...state, photo: action.payload.photo };
+    }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
@@ -20,8 +23,7 @@ function badgeReducer(state, action) {
 function BadgeProvider({ children }) {
   const initialState = {
     color: '#ffa700',
-    name: 'minatozaki\nsana',
-    photo: ''
+    name: 'minatozaki\nsana'
   };
   const [state, dispatch] = React.useReducer(badgeReducer, initialState);
   return (

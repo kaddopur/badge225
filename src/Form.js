@@ -40,10 +40,38 @@ const NameTextArea = () => {
       onChange={e =>
         dispatch({
           type: 'updateName',
-          payload: { name: e.target.value.trim() }
+          payload: { name: e.target.value }
         })
       }
     ></textarea>
+  );
+};
+
+const PhotoFileInput = () => {
+  const inputEl = React.useRef(null);
+  const dispatch = useBadgeDispatch();
+
+  return (
+    <input
+      type="file"
+      ref={inputEl}
+      onChange={() => {
+        if (!inputEl.current.files || !inputEl.current.files[0]) {
+          return;
+        }
+
+        const FR = new FileReader();
+
+        FR.addEventListener('load', loadEvent => {
+          dispatch({
+            type: 'updatePhoto',
+            payload: { photo: loadEvent.target.result }
+          });
+        });
+
+        FR.readAsDataURL(inputEl.current.files[0]);
+      }}
+    />
   );
 };
 
@@ -52,6 +80,7 @@ const Form = () => {
     <form id="Form">
       <ColorSelect />
       <NameTextArea />
+      <PhotoFileInput />
     </form>
   );
 };

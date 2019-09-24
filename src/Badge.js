@@ -1,11 +1,11 @@
 import React from 'react';
-import './Badge.css';
+import { useBadgeState } from './badgeContext';
 import logo from './logo.svg';
 import sana from './sana.png';
-import { useBadgeState } from './badgeContext';
+import './Badge.css';
 
 const Badge = () => {
-  const { color, name } = useBadgeState();
+  const { color, name, photo = sana } = useBadgeState();
 
   return (
     <div id="badge">
@@ -18,7 +18,10 @@ const Badge = () => {
           </span>
         ))}
       </div>
-      <div className="avatar" style={{ backgroundImage: `url(${sana})` }}></div>
+      <div
+        className="avatar"
+        style={{ backgroundImage: `url(${photo})` }}
+      ></div>
       <div className="top-overlay"></div>
       <div className="bottom-overlay" style={{ backgroundColor: color }}></div>
     </div>
