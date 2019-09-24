@@ -16,7 +16,7 @@ function badgeReducer(state, action) {
 
 function BadgeProvider({ children }) {
   const initialState = {
-    color: '#ffa700',
+    color: '#1ac567',
     name: 'minatozaki\nsana',
     photo: ''
   };

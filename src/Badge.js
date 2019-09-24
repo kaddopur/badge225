@@ -11,11 +11,11 @@ const Badge = () => {
     <div id="badge">
       <img className="logo" src={logo} alt="" />
       <div className="name">
-        {name.split('\n').map(chunk => (
-          <>
+        {name.split('\n').map((chunk, index) => (
+          <span key={index}>
             <span>{chunk}</span>
             <br />
-          </>
+          </span>
         ))}
       </div>
       <div className="avatar" style={{ backgroundImage: `url(${sana})` }}></div>
