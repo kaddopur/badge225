@@ -1,3 +1,4 @@
 #App {
   display: flex;
+  -webkit-print-color-adjust: exact;
 }

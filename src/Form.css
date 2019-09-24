@@ -1,4 +1,10 @@
-#Form {
+#form {
   display: flex;
   flex-direction: column;
+}
+
+@media print {
+  #form {
+    display: none;
+  }
 }

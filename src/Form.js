@@ -77,7 +77,7 @@ const PhotoFileInput = () => {
 
 const Form = () => {
   return (
-    <form id="Form">
+    <form id="form">
       <ColorSelect />
       <NameTextArea />
       <PhotoFileInput />
