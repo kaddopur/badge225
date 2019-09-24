@@ -1,9 +1,5 @@
-@font-face {
-  font-family: 'Yahoo-Sans-Bold';
-  src: local('Yahoo-Sans-Bold'), url(./Yahoo-Sans-Bold.woff) format('woff');
-}
-
 #badge {
+  flex-shrink: 0;
   width: 591px;
   height: 945px;
   background-color: #6001d2;

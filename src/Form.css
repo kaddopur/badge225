@@ -1,6 +1,37 @@
 #form {
+  margin-left: 20px;
+}
+
+#form .container {
+  margin-bottom: 20px;
+}
+
+#form .container > * {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
+}
+
+#form .print-button {
+  font-family: 'Yahoo-Sans-Bold';
+  outline: none;
+  background-color: #1888ff;
+  color: white;
+  font-size: 14px;
+  border-radius: 18px;
+  padding: 0 24px;
+  line-height: 36px;
+}
+
+#form label {
+  display: block;
+  font-size: 12px;
+  line-height: 2;
+  color: #999ca5;
+}
+
+#form cite {
+  font-size: 12px;
 }
 
 @media print {

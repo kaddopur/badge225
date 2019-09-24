@@ -1,4 +1,11 @@
+@font-face {
+  font-family: 'Yahoo-Sans-Bold';
+  src: local('Yahoo-Sans-Bold'), url(./Yahoo-Sans-Bold.woff) format('woff');
+}
+
 #App {
   display: flex;
+  width: 1020px;
+  margin: 0 auto;
   -webkit-print-color-adjust: exact;
 }
