@@ -3,21 +3,54 @@ import React from 'react';
 const BadgeStateContext = React.createContext();
 const BadgeDispatchContext = React.createContext();
 
+function getLocalState() {
+  if (!localStorage) {
+    throw new Error('badgeState must be use with localStorage');
+  }
+
+  try {
+    const rawState = localStorage.getItem('badgeState');
+    if (rawState !== null) {
+      return JSON.parse(rawState);
+    }
+  } catch (e) {
+    throw new Error('error parsing badgeState from localStorage');
+  }
+
+  return null;
+}
+
+function setLocalState(state) {
+  if (!localStorage) {
+    throw new Error('badgeState must be use with localStorage');
+  }
+
+  localStorage.setItem('badgeState', JSON.stringify(state));
+}
+
 function badgeReducer(state, action) {
+  let newState = null;
+
   switch (action.type) {
     case 'updateColor': {
-      return { ...state, color: action.payload.color };
+      newState = { ...state, color: action.payload.color };
+      break;
     }
     case 'updateName': {
-      return { ...state, name: action.payload.name };
+      newState = { ...state, name: action.payload.name };
+      break;
     }
     case 'updatePhoto': {
-      return { ...state, photo: action.payload.photo };
+      newState = { ...state, photo: action.payload.photo };
+      break;
     }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
   }
+
+  setLocalState(newState);
+  return newState;
 }
 
 function BadgeProvider({ children }) {
@@ -25,7 +58,11 @@ function BadgeProvider({ children }) {
     color: '#ffa700',
     name: 'minatozaki\nsana'
   };
-  const [state, dispatch] = React.useReducer(badgeReducer, initialState);
+
+  const [state, dispatch] = React.useReducer(
+    badgeReducer,
+    getLocalState() || initialState
+  );
   return (
     <BadgeStateContext.Provider value={state}>
       <BadgeDispatchContext.Provider value={dispatch}>

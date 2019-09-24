@@ -5,7 +5,7 @@ import sana from '../assets/sana.png';
 import './Badge.css';
 
 const Badge = () => {
-  const { color, name, photo = sana } = useBadgeState();
+  const { color = '', name = '', photo = sana } = useBadgeState();
 
   return (
     <div id="badge">
