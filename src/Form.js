@@ -30,10 +30,28 @@ const ColorSelect = () => {
   );
 };
 
+const NameTextArea = () => {
+  const { name } = useBadgeState();
+  const dispatch = useBadgeDispatch();
+
+  return (
+    <textarea
+      value={name}
+      onChange={e =>
+        dispatch({
+          type: 'updateName',
+          payload: { name: e.target.value.trim() }
+        })
+      }
+    ></textarea>
+  );
+};
+
 const Form = () => {
   return (
-    <form>
+    <form id="Form">
       <ColorSelect />
+      <NameTextArea />
     </form>
   );
 };

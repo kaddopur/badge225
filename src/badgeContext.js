@@ -8,6 +8,9 @@ function badgeReducer(state, action) {
     case 'updateColor': {
       return { ...state, color: action.payload.color };
     }
+    case 'updateName': {
+      return { ...state, name: action.payload.name };
+    }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
@@ -16,7 +19,7 @@ function badgeReducer(state, action) {
 
 function BadgeProvider({ children }) {
   const initialState = {
-    color: '#1ac567',
+    color: '#ffa700',
     name: 'minatozaki\nsana',
     photo: ''
   };
