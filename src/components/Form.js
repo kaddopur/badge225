@@ -113,7 +113,7 @@ const Form = () => {
           situation
         </li>
         <li>
-          Inspired from&nbsp;
+          Inspired by&nbsp;
           <a
             href="https://www.pentagram.com/work/yahoo/story?fbclid=IwAR0DK3rJZIqnIsNGagz1YO0YFyHK3Xb0hjNRg-0Qufwg9XdAdz0WoAg8egc#27144"
             target="_blank"
