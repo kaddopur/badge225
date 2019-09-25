@@ -63,6 +63,6 @@
 @media print {
   #badge {
     transform-origin: left top;
-    transform: scale(calc(96 / 300));
+    transform: scale(calc(136 / 300));
   }
 }
